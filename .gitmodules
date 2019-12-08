@@ -1,0 +1,3 @@
+[submodule "tools/imgtosdat"]
+	path = tools/img2sdat
+	url = https://github.com/iamsaalim/img2sdat.git
