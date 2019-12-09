@@ -1,5 +1,7 @@
 # IMG2ZIP
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ba9feedd8574a3b97d77fecca23f1d5)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iamsaalim/gsi2zip&amp;utm_campaign=Badge_Grade)
+
 ## Requirements
     Linux or Mac
 
