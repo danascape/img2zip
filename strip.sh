@@ -7,6 +7,6 @@ if [[ -z "$(output/system.new.dat.br)" ]]; then
 else 
     echo "starting compress script"
 fi
-   mv output/system.new.dat.br $ANYDEVICE_DIR
-   cd $ANYDEVICE_DIR
+   mv "output/system.new.dat.br" "$ANYDEVICE_DIR"
+   cd "$ANYDEVICE_DIR"
    make normal

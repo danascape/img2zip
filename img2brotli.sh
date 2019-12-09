@@ -27,13 +27,13 @@ fi
     mv system.img input/
     cd input/
     mkdir compress
-    python $TOOLS_DIR/img2sdat/img2sdat.py system.img -o compress -v 4 -p system
+    python "$TOOLS_DIR/img2sdat/img2sdat.py" "system.img" -o "compress" -v "4" -p "system"
     cd compress 
     brotli system.new.dat -2
-    mv system.new.dat.br $OUTPUT_DIR
-    cd $PROJECT_DIR
+    mv "system.new.dat.br" "$OUTPUT_DIR"
+    cd "$PROJECT_DIR"
 
-if [[ -z "$(find $OUTPUT_DIR/system.new.dat.br)" ]]; then
+if [[ -z "$(find "$OUTPUT_DIR/system.new.dat.br")" ]]; then
     echo "compress script failed check screen for error and rerun"
     
 else

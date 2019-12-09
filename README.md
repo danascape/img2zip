@@ -4,8 +4,8 @@
     Linux or Mac
 
 ### Clone tools
-```
-git clone --recurse-submodules https://github.com/iamsaalim/gsi2zip.git
+
+git clone --recurse-submodules <https://github.com/iamsaalim/gsi2zip.git>
 
 ### For setting up requirements
     bash setup.sh
@@ -17,5 +17,3 @@ git clone --recurse-submodules https://github.com/iamsaalim/gsi2zip.git
     bash strip.sh	
 
 Check scripts for more info
-
-
