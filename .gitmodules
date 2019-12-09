@@ -4,7 +4,7 @@
 	
 [submodule "tools/Anydevice"]
 	path = tools/Anydevice
-	url = https://github.com/iamsaalim/Anydevice.git	
+	url = https://github.com/iamsaalim/Anydevice.git
 
 [submodule "tools/sdat2img"]
 	path = tools/sdat2img
