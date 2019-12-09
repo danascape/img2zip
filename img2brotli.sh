@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-export tools_dir=$PWD
+export PROJECT_DIR=$PWD
+export TOOLS_DIR=$PWD/tools
+export OUTPUT_DIR=$PWD/output
 
 if [[ -z "$(which python)" ]]; then
     echo "Install python!"
@@ -22,14 +24,14 @@ else
     mv system.img input/
     cd input/
     mkdir compress
-    python $tools_dir/img2sdat.py system.img -o compress -v 4 -p system
+    python $TOOLS_DIR/img2sdat/img2sdat.py system.img -o compress -v 4 -p system
     cd compress 
     brotli system.new.dat -2
-    mv system.new.dat.br ../../output
-    cd $tools_dir
+    mv system.new.dat.br $OUTPUT_DIR
+    cd $PROJECT_DIR
 fi    
 
-if [[ -z "$(find output/system.new.dat.br)" ]]; then
+if [[ -z "$(find $OUTPUT_DIR/system.new.dat.br)" ]]; then
     echo "compress script failed check screen for error and rerun"
     
 else
