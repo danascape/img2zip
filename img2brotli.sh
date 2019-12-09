@@ -8,7 +8,7 @@ if [[ -z "$(which python)" ]]; then
     echo "Install python!"
     echo "sudo apt-get install python"
     
-elif [[ -z "$(which forever)" ]]; then
+elif [[ -z "$(which brotli)" ]]; then
     echo "Install brotli!"
     echo "sudo apt-get install brotli"
     
@@ -36,4 +36,6 @@ if [[ -z "$(find $OUTPUT_DIR/system.new.dat.br)" ]]; then
     
 else
     echo "img2brotli completed successfully."
+
     echo "find brotli compressed image in output dir."
+fi
