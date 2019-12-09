@@ -8,4 +8,4 @@
 
 [submodule "tools/sdat2img"]
 	path = tools/sdat2img
-	url = https://github.com/iamsaalim/sdat2img.git
+	url = https://github.com/iamsaalim/sdat2img
