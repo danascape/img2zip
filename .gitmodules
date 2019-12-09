@@ -1,6 +1,6 @@
 [submodule "tools/img2sdat"]
 	path = tools/img2sdat
-	url = https://github.com/iamsaalim/img2sdat.git
+	url = https://github.com/iamsaalim/img2sdat
 	
 [submodule "tools/Anydevice"]
 	path = tools/Anydevice
