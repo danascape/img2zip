@@ -23,8 +23,8 @@ else
 fi
     mkdir input
     mkdir output
-    mv "$1" input/
-    cd input/system.img
+    mv "$1" input/system.img
+    cd input/
     mkdir compress
     python "$TOOLS_DIR/img2sdat/img2sdat.py" "system.img" -o "compress" -v "4" -p "system"
     cd compress
