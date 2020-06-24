@@ -5,7 +5,7 @@ export TOOLS_DIR=$PWD/tools
 export OUTPUT_DIR=$PWD/output
 
 # Arguements check
-if [ -z ${1} ]  ; then
+if [ -z "${1}" ]  ; then
     echo -e "Usage: bash img2brotli.sh <Path to system.img>"
     exit 1
 fi
@@ -23,7 +23,7 @@ else
 fi
     mkdir input
     mkdir output
-    mv $1 input/
+    mv "$1" input/
     cd input/system.img
     mkdir compress
     python "$TOOLS_DIR/img2sdat/img2sdat.py" "system.img" -o "compress" -v "4" -p "system"
