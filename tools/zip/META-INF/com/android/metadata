@@ -1,0 +1,9 @@
+ota-property-files=metadata:69:333         
+ota-required-cache=0
+ota-type=BLOCK
+post-build=asus/None/ASUS_X01A_1:10/WW_Phone-202005071625/17.2018.2004.31-20200507:user/release-keys
+post-build-incremental=17.2018.2004.31-20200507
+post-sdk-level=29
+post-security-patch-level=2020-04-05
+post-timestamp=1588841012
+pre-device=ASUS_X01A_1

@@ -1,0 +1,11 @@
+ui_print(" ");
+ui_print("------------------------");
+ui_print(" Zip made using gsi2zip ");
+ui_print("        by Saalim       ");     
+ui_print("------------------------");
+ui_print("        ROM name        ");
+show_progress(0.650000, 0);
+ui_print("Patching system image unconditionally...");
+block_image_update("/dev/block/bootdevice/by-name/system", package_extract_file("system.transfer.list"), "system.new.dat.br", "system.patch.dat") ||
+  abort("E1001: Failed to update system image.");
+set_progress(1.000000);
