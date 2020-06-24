@@ -6,11 +6,10 @@
     Linux
 
 ### Clone tools
-
-git clone --recurse-submodules <https://github.com/iamsaalim/gsi2zip.git>
+    git clone --recurse-submodules <https://github.com/iamsaalim/gsi2zip.git>
 
 ### For setting up requirements
-    bash setup.sh
+    bash setup.sh <path to system image>
 
 ### Generate brotli image
     bash img2gsi.sh
