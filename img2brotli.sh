@@ -4,6 +4,12 @@ export PROJECT_DIR=$PWD
 export TOOLS_DIR=$PWD/tools
 export OUTPUT_DIR=$PWD/output
 
+# Arguements check
+if [ -z ${1} ]  ; then
+    echo -e "Usage: bash img2brotli.sh <Path to system.img>"
+    exit 1
+fi
+
 if [[ -z "$(which python)" ]]; then
     echo "Install python!"
     echo "sudo apt-get install python"
@@ -12,18 +18,13 @@ elif [[ -z "$(which brotli)" ]]; then
     echo "Install brotli!"
     echo "sudo apt-get install brotli"
 
-elif [[ -z "$(find system.img)" ]]; then
-    echo "where is system image ?!"
-    echo "paste system.img on current directory"
-
 else
     echo "Dependencies Satisfied"
-    echo "Running the script "
 fi
     mkdir input
     mkdir output
-    mv system.img input/
-    cd input/
+    mv $1 input/
+    cd input/system.img
     mkdir compress
     python "$TOOLS_DIR/img2sdat/img2sdat.py" "system.img" -o "compress" -v "4" -p "system"
     cd compress
@@ -36,6 +37,5 @@ if [[ -z "$(find "$OUTPUT_DIR/system.new.dat.br")" ]]; then
 
 else
     echo "img2brotli completed successfully."
-
     echo "find brotli compressed image in output dir."
 fi
