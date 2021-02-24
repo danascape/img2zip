@@ -11,15 +11,13 @@ if [ -z "${1}" ]  ; then
 fi
 
 if [[ -z "$(which python)" ]]; then
-    echo "Install python!"
-    echo "sudo apt-get install python"
-
+    echo "python is not installed"
+    echo "Install it by using 'sudo apt-get install python'"
+    exit 1
 elif [[ -z "$(which brotli)" ]]; then
-    echo "Install brotli!"
-    echo "sudo apt-get install brotli"
-
-else
-    echo "Dependencies Satisfied"
+    echo "brotli is not installed"
+    echo "Install it by using 'sudo apt-get install brotli'"
+    exit 1
 fi
     mkdir input
     mkdir output
