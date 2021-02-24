@@ -12,7 +12,7 @@
     bash setup.sh <path to system image>
 
 ### Generate brotli image
-    bash img2gsi.sh
+    bash img2brotli.sh
 
 ### Generate zip file of the compressed images
     bash strip.sh	
