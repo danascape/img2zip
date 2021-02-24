@@ -1,3 +1,4 @@
+ifelse(is_mounted("/system"), unmount("/system"));
 ui_print(" ");
 ui_print("------------------------");
 ui_print(" Zip made using gsi2zip ");
