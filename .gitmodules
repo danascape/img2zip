@@ -1,7 +1,3 @@
 [submodule "tools/img2sdat"]
 	path = tools/img2sdat
 	url = https://github.com/xpirt/img2sdat
-	
-[submodule "tools/sdat2img"]
-	path = tools/sdat2img
-	url = https://github.com/xpirt/sdat2img
