@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-export PROJECT_DIR=$PWD
-export TOOLS_DIR=$PWD/tools
-export OUTPUT_DIR=$PWD/output
+# Copyright (C) 2020 Saalim Quadri (danascape)
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+# Setup variables
+PROJECT_DIR="$PWD"
+TOOLS_DIR="$PWD/tools"
+OUTPUT_DIR="$PWD/output"
 
 # Arguements check
 if [ -z "${1}" ]; then
@@ -10,6 +14,7 @@ if [ -z "${1}" ]; then
 	exit 1
 fi
 
+# Packages
 if [[ -z "$(which python)" ]]; then
 	echo "python is not installed"
 	echo "Install it by using 'sudo apt-get install python'"
@@ -19,9 +24,15 @@ elif [[ -z "$(which brotli)" ]]; then
 	echo "Install it by using 'sudo apt-get install brotli'"
 	exit 1
 fi
+
+# Create directories
 mkdir input
 mkdir output
-mv "$1" input/system.img
+
+# Copy system image
+cp "$1" input/system.img
+
+# Do the sorcery
 cd input/
 mkdir compress
 python "$TOOLS_DIR/img2sdat/img2sdat.py" "system.img" -o "compress" -v "4" -p "system"
@@ -30,6 +41,7 @@ brotli system.new.dat -2
 mv "system.new.dat.br" "$OUTPUT_DIR"
 cd "$PROJECT_DIR"
 
+# Check if its done
 if [[ -z "$(find "$OUTPUT_DIR/system.new.dat.br")" ]]; then
 	echo "compress script failed check screen for error and rerun"
 
